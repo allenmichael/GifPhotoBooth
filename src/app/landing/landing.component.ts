@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AmplifyService } from 'aws-amplify-angular';
 
 @Component({
   selector: 'app-landing',
@@ -7,7 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+  isSignedIn = false;
+  constructor(public amplify: AmplifyService) {
+    amplify.authStateChange$
+      .subscribe(authState => {
+        console.log(authState);
+        if (authState.state === 'signedIn') {
+          this.isSignedIn = true;
+          //   this.router.navigate(['/gifs']);
+        }
+        // if (authState.state === 'signedOut') {
+        //   this.router.navigate(['/landing']);
+        // }
+      });
+  }
 
   ngOnInit() {
   }

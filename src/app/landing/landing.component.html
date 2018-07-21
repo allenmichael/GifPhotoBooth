@@ -1,1 +1,10 @@
 <amplify-authenticator></amplify-authenticator>
+<div class="flex-container">
+  <div class="row">
+    <mat-card class="flex-item" *ngIf="isSignedIn">
+      <button mat-button>
+        <span routerLink="/gifs">Start making gifs!</span>
+      </button>
+    </mat-card>
+  </div>
+</div>
