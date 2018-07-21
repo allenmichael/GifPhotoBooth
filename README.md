@@ -1,27 +1,17 @@
 # GifPhotoBooth
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
+## Useful Links:
+[AWS Amplify Github project](https://github.com/aws-amplify/amplify-js)
+[AWS Amplify Docs](https://aws-amplify.github.io/amplify-js/)
+[AWS Amplify Quickstart](https://aws-amplify.github.io/amplify-js/media/quick_start)
+[AWS Amplify Angular Guide](https://aws-amplify.github.io/amplify-js/media/angular_guide.html)
+[AWS Amplify React Starter](https://github.com/aws-samples/aws-mobile-react-sample)
+[AWS Amplify Angular Starter Article](https://medium.freecodecamp.org/building-cloud-enabled-javascript-applications-with-aws-amplify-angular-682547fc6477)
+[AWS Amplify Vue.js Starter](https://github.com/aws-samples/aws-amplify-vue)
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Useful Commands:
+`awsmobile init` - creates awsmobile files 
+`awsmobile start` - scaffolds a React or React Native project
+`awsmobile push` - sync backend features
+`awsmobile pull` - sync local awsmobile files with changes in backend
+`awsmobile publish` - sync backend features and push your webapp to S3 hosting
