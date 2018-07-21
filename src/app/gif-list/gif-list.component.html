@@ -1,0 +1,9 @@
+<mat-card *ngFor="let gif of gifs">
+  <mat-card-title>{{gif.gifFileName}}</mat-card-title>
+  <div *ngIf="gif.status === 'COMPLETED'">
+    <mat-card-subtitle>Gif created.</mat-card-subtitle>
+    <mat-card-content>
+        <button (click)="getGif(gif.gifUrl)" mat-button>View Gif</button>
+    </mat-card-content>
+  </div>
+</mat-card>

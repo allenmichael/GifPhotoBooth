@@ -1,0 +1,32 @@
+<mat-grid-list cols="2" rowHeight="550px">
+  <mat-grid-tile>
+    <mat-card class="recording-card">
+      <mat-card-header>
+        <mat-card-title>
+          Record your gif
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="recording-card-content">
+        <div>
+          <video  #videoRecorder autoplay playsinline controls height="350px" width="450px"></video>
+        </div>
+        <button (click)="startRecording()" mat-button>Start recording</button>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card class="recording-card">
+      <mat-card-header>
+        <mat-card-title>
+          Review your gif
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div>
+          <video #videoPlayer loop controls height="350px" width="450px"></video>
+        </div>
+        <button (click)="saveRecording()" mat-button>Save recording</button>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
