@@ -77,14 +77,14 @@ export class GifMakerComponent implements OnInit, OnDestroy {
       userId = Math.random().toString().split('.')[1];
     }
     console.log(user.idToken.payload.sub);
-    console.log(Date.now());
-    const result = await this.amplify.storage().put(`${userId}-${Date.now()}.webm`, this.video);
+    const datetime = Date.now();
+    const result = await this.amplify.storage().put(`${userId}-${datetime}.webm`, this.video);
     const resp = await this.amplify.api().post('gifs', '/gifs',
       {
         response: true,
         body: {
           userId: user.idToken.payload.sub,
-          gifFileName: `${userId}-${Date.now()}.webm`
+          gifFileName: `${userId}-${datetime}.webm`
         }
       });
     console.log(result);

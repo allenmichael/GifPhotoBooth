@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AmplifyService } from 'aws-amplify-angular';
 import { Router } from '@angular/router';
+import { map, catchError } from '../../node_modules/rxjs/operators';
 
 @Component({
   selector: 'app-root',
