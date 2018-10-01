@@ -20,11 +20,17 @@ export class GifMakerComponent implements OnInit, OnDestroy {
   public hasRecording = false;
   public videoBytes: any[];
   public video: Blob;
+  public breakpoint: Number;
+  public vidHeight = 350;
+  public vidWidth = 450;
 
   constructor(private cam: CameraService, private amplify: AmplifyService) {
     this.amplify.storage().configure({ level: 'public' });
   }
   async ngOnInit() {
+    this.breakpoint = (window.innerWidth <= 500) ? 1 : 2;
+    this.vidHeight = (window.innerWidth <= 500) ? 250 : this.vidHeight;
+    this.vidWidth = (window.innerWidth <= 500) ? 350 : this.vidWidth;
     const resp = await this.amplify.api().get('gifs', '/gifs', { response: true });
     console.log(resp);
     console.log(this.recorder);

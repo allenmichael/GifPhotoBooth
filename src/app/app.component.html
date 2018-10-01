@@ -8,17 +8,17 @@
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-menu #menu="matMenu" xPosition="before">
-  <button *ngIf="isSignedIn" mat-menu-item>
-    <span routerLink="/gifs">Make some Gifs!</span>
-  </button>
-  <button *ngIf="isSignedIn" mat-menu-item>
-    <span routerLink="/gif-list">View your Gifs!</span>
-  </button>
+  <a *ngIf="isSignedIn" routerLink="/gifs" mat-menu-item>
+    <span>Make some Gifs!</span>
+  </a>
+  <a *ngIf="isSignedIn" routerLink="/gif-list" mat-menu-item>
+    <span>View your Gifs!</span>
+  </a>
   <button *ngIf="isSignedIn" (click)="signOut()" mat-menu-item>
     <span>Sign Out</span>
   </button>
-  <button *ngIf="!isSignedIn" mat-menu-item>
-    <span routerLink="/landing">Sign In</span>
-  </button>
+  <a *ngIf="!isSignedIn" routerLink="/landing" mat-menu-item>
+    <span>Sign In</span>
+  </a>
 </mat-menu>
 <router-outlet></router-outlet>

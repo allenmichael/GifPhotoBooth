@@ -1,6 +1,8 @@
 # GifPhotoBooth
 
 ## Useful Links:
+[Serverless Backend Code](https://github.com/allenmichael/GifPhotoBoothBackendServices)
+
 [Application Architecture Diagram](https://cloudcraft.co/view/96d0e5a1-c0ad-473b-ada5-d8572f364dd3?key=LIF56ULR2pzwixtcwD8BPQ)
 
 [AWS Amplify Github project](https://github.com/aws-amplify/amplify-js)
@@ -18,12 +20,10 @@
 [AWS Amplify Vue.js Starter](https://github.com/aws-samples/aws-amplify-vue)
 
 ## Useful Commands:
-`awsmobile init` - creates awsmobile files 
+`amplify init` - creates Amplify files 
 
-`awsmobile start` - scaffolds a React or React Native project
+`amplify add <category>` - add features to your Amplify app
 
-`awsmobile push` - sync backend features
+`amplify push` - sync backend features
 
-`awsmobile pull` - sync local awsmobile files with changes in backend
-
-`awsmobile publish` - sync backend features and push your webapp to S3 hosting
+`amplify publish` - sync backend features and push your webapp to S3 hosting

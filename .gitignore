@@ -7,6 +7,8 @@
 /awsmobilejs
 /src/aws_exports.*
 .vscode
+.amplifyrc
+/amplify
 
 # dependencies
 /node_modules

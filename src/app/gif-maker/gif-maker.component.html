@@ -1,6 +1,6 @@
-<mat-grid-list cols="2" rowHeight="550px">
+<mat-grid-list [cols]="breakpoint" rowHeight="550px">
   <mat-grid-tile>
-    <mat-card class="recording-card">
+    <mat-card>
       <mat-card-header>
         <mat-card-title>
           Record your gif
@@ -8,7 +8,7 @@
       </mat-card-header>
       <mat-card-content class="recording-card-content">
         <div>
-          <video  #videoRecorder autoplay playsinline controls height="350px" width="450px"></video>
+          <video  #videoRecorder autoplay playsinline controls [style.height.px]="vidHeight" [style.width.px]="vidWidth"></video>
         </div>
         <button (click)="startRecording()" mat-button>Start recording</button>
       </mat-card-content>
@@ -23,7 +23,7 @@
       </mat-card-header>
       <mat-card-content>
         <div>
-          <video #videoPlayer loop controls height="350px" width="450px"></video>
+          <video #videoPlayer loop controls [style.height.px]="vidHeight" [style.width.px]="vidWidth"></video>
         </div>
         <button (click)="saveRecording()" mat-button>Save recording</button>
       </mat-card-content>
